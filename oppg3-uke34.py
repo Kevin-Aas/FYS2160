@@ -4,7 +4,7 @@ t = []
 T_kald = []
 T_varm = []
 
-with (open("metalblocks_lecture.tsv") as infile):
+with open("metalblocks_lecture.tsv") as infile:
     for i in infile:
         t.append(float(i.split()[0]))
         T_kald.append(float(i.split()[1]))
