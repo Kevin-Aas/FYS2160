@@ -40,12 +40,6 @@ plt.xlabel(r"$E^*$")
 plt.ylabel("Antall mikrotilstander")
 plt.grid(color='black', linestyle = '--', linewidth = 0.25)
 plt.xlim([-15, 15])
-#plt.show()
-
-
-
-def multiplis(N, s):
-    return  factorial(N) / (factorial(N/2 + s) * factorial(N/2 - s))
 
 s = np.linspace(-15, 15, 500)
 alt_multiplis = 2**N * np.e**(-2*s**2 / N)
@@ -57,3 +51,4 @@ plt.xlabel("s")
 plt.ylabel(r"$\Omega(50, s)$")
 plt.xlim([-15, 15])
 plt.show()
+
