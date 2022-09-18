@@ -18,11 +18,18 @@ for i in range(10000):
             S_plus +=1
         else:
             S_min += 1
-    s[i]=S_plus - S_min
+    s[i]= (S_plus - S_min)/2
 
-plt.subplot(2, 1, 1)
-plt.hist(s)
+#plt.subplot(2, 1, 1)
+#plt.hist(s)
+plt.plot(s, '.')
+plt.xlabel("M")
+plt.ylabel(r"$E^*$", rotation=0)
+plt.grid(color='black', linestyle = '--', linewidth = 0.25)
+plt.show()
 
+
+'''
 def multiplis(N, s):
     return  factorial(N) / (factorial(N/2 + s) * factorial(N/2 - s))
 
@@ -33,3 +40,4 @@ plt.subplot(2, 1, 2)
 plt.plot(alt_multiplis)
 
 plt.show()
+'''
