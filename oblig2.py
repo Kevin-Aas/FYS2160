@@ -16,6 +16,7 @@ for q_A in range(0, 7):
     s = micro_states(6, q_A, 2, 2)
     print(s)
 
+###
 states = []
 q_A = np.linspace(0, 100, 101)
 for q_Ai in q_A:
