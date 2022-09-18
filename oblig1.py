@@ -27,15 +27,18 @@ tau_T = -1/slope
 print(f"Temperfect tau = {tau_T:.2f}")
 
 T_w = np.e**(-t/tau_B) * (88.5-22) + 22
-#plt.plot(t, T_w, "r--", label="Modell")
+plt.plot(t, T_w, "r--", label="Modell")
+T_w_luft = -t*0.01/(1.256) + 88.5
+plt.plot(t, T_w_luft)
+
 
 T_w = np.e**(-t/tau_T) * (79.1-22) + 22
 #plt.plot(t, T_w)
 
 print(np.mean(T2[600:1000]))
 
-#plt.plot(t, T_B, label="Bodum")
-plt.plot(t[:6000], T_T[:6000], "orange", label="Temperfect")
+plt.plot(t, T_B, label="Bodum")
+#plt.plot(t[:6000], T_T[:6000], "tab:orange", label="Temperfect")
 plt.grid(color = 'green', linestyle = '--', linewidth = 0.25)
 plt.xlabel("Time (s)")
 plt.ylabel("Temperature (°C)")
